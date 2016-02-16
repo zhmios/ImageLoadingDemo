@@ -35,7 +35,7 @@
         CGFloat centerX = (CGRectGetWidth(superView.frame) - width) / 2;
         CGFloat centerY = (CGRectGetHeight(superView.frame) - height) / 2;
         self.frame = CGRectMake(centerX, centerY, width, height);
-        
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
         self.imageArray = imageArray;
         self.type = type;
         self.superView = superView;
@@ -54,7 +54,7 @@
     }
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:frame];
-    
+    imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
     NSMutableArray *images = [[NSMutableArray alloc]init];
     
     for (int i = 0; i < self.imageArray.count; i ++) {
@@ -74,7 +74,7 @@
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), CGRectGetWidth(self.bounds), LABEL_HEIGHT)];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor blackColor];
-        
+        label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
         if (self.labelContent == nil) {
             
             label.text = @"正在加载...";
