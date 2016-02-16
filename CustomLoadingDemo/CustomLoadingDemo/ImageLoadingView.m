@@ -7,7 +7,7 @@
 //
 
 #import "ImageLoadingView.h"
-#define LABEL_HEIGHT  15
+#define LABEL_HEIGHT  10
 @interface ImageLoadingView()
 
 @property (nonatomic, strong) UIView *superView;
