@@ -7,21 +7,31 @@
 //
 
 #import "ViewController.h"
-
+#import "ImageLoadingView.h"
 @interface ViewController ()
 
+@property (nonatomic,strong)ImageLoadingView *loadingView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.loadingView = [[ImageLoadingView alloc]initImageLoadingViewWithImages:@[@"loading_fullscreen_anim_01",@"loading_fullscreen_anim_02",@"loading_fullscreen_anim_03"] withSuperView:self.view];
+
+    [self.loadingView show];
+    
+}
+- (IBAction)navigationBtnPress:(id)sender {
+
+    [self.loadingView show];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end
