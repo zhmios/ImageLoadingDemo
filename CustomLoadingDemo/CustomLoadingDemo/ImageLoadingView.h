@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageLoadingView : UIView
+typedef enum {
+    
+imageLoadingType = 0,
+    
+imageAndTextType
 
-- (id) initImageLoadingViewWithImages:(NSArray *)imageArray withSuperView:(UIView *)superView;
+} ImageLoadingViewType;
+
+@interface ImageLoadingView : UIView
+@property (nonatomic,strong) NSString *labelContent;
+@property (nonatomic,strong) UIFont *font;
+- (id)initImageLoadingViewWithImages:(NSArray *)imageArray andloadingType:(ImageLoadingViewType)type withSuperView:(UIView *)superView;
+
 - (void)show;
 - (void)dismiss;
 @end

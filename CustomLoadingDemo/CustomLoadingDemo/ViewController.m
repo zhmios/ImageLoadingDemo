@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.loadingView = [[ImageLoadingView alloc]initImageLoadingViewWithImages:@[@"loading_fullscreen_anim_01",@"loading_fullscreen_anim_02",@"loading_fullscreen_anim_03"] withSuperView:self.view];
+    self.loadingView = [[ImageLoadingView alloc]initImageLoadingViewWithImages:@[@"loading_fullscreen_anim_01",@"loading_fullscreen_anim_02",@"loading_fullscreen_anim_03"] andloadingType:imageAndTextType withSuperView:self.view ];
 
     [self.loadingView show];
     

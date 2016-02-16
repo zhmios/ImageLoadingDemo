@@ -7,30 +7,37 @@
 //
 
 #import "ImageLoadingView.h"
+#define LABEL_HEIGHT  15
 @interface ImageLoadingView()
 
 @property (nonatomic, strong) UIView *superView;
 @property (nonatomic, strong) NSArray *imageArray;
+@property (nonatomic, assign) ImageLoadingViewType type;
 
 @end
 
 @implementation ImageLoadingView
 
-- (id) initImageLoadingViewWithImages:(NSArray *)imageArray withSuperView:(UIView *)superView{
+- (id) initImageLoadingViewWithImages:(NSArray *)imageArray andloadingType:(ImageLoadingViewType)type withSuperView:(UIView *)superView{
 
     self = [super init];
     
     if (self != nil) {
         
-        self.backgroundColor = [UIColor redColor];
+//        self.backgroundColor = [UIColor redColor];
         CGFloat width = 80;
         CGFloat height = 80;
-        
+        if (type == imageAndTextType) {
+            
+            width = 80;
+            height = 80 + LABEL_HEIGHT;
+        }
         CGFloat centerX = (CGRectGetWidth(superView.frame) - width) / 2;
         CGFloat centerY = (CGRectGetHeight(superView.frame) - height) / 2;
         self.frame = CGRectMake(centerX, centerY, width, height);
         
         self.imageArray = imageArray;
+        self.type = type;
         self.superView = superView;
     }
 
@@ -39,7 +46,14 @@
 
 - (void)makeApparance{
 
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.bounds];
+    CGRect frame = self.bounds;
+    
+    if (self.type == imageAndTextType) {
+        
+        frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - LABEL_HEIGHT);
+    }
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:frame];
     
     NSMutableArray *images = [[NSMutableArray alloc]init];
     
@@ -54,6 +68,34 @@
     [imageView startAnimating];
     imageView.tag = 1;
     [self addSubview:imageView];
+    
+    if (self.type == imageAndTextType) {
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), CGRectGetWidth(self.bounds), LABEL_HEIGHT)];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor blackColor];
+        
+        if (self.labelContent == nil) {
+            
+            label.text = @"正在加载...";
+            
+        }else{
+        
+            label.text = self.labelContent;
+        
+        }
+        if (self.font == nil) {
+            
+            label.font = [UIFont systemFontOfSize:12];
+            
+            
+        }else{
+            label.font = self.font;
+        
+        }
+     
+        [self addSubview:label];
+    }
 
 
 }

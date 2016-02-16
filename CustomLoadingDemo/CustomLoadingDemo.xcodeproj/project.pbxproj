@@ -16,7 +16,6 @@
 		C9E6BF321C72FC7900E1BB7D /* CustomLoadingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BF311C72FC7900E1BB7D /* CustomLoadingDemoTests.m */; };
 		C9E6BF3D1C72FC7900E1BB7D /* CustomLoadingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BF3C1C72FC7900E1BB7D /* CustomLoadingDemoUITests.m */; };
 		C9E6BF4C1C72FFEB00E1BB7D /* ImageLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BF4B1C72FFEB00E1BB7D /* ImageLoadingView.m */; };
-		C9E6BF4E1C73002700E1BB7D /* ImageLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E6BF4D1C73002700E1BB7D /* ImageLoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		C9E6BF3E1C72FC7900E1BB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9E6BF4A1C72FFEB00E1BB7D /* ImageLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoadingView.h; sourceTree = "<group>"; };
 		C9E6BF4B1C72FFEB00E1BB7D /* ImageLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoadingView.m; sourceTree = "<group>"; };
-		C9E6BF4D1C73002700E1BB7D /* ImageLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageLoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +110,6 @@
 				C9E6BF1E1C72FC7900E1BB7D /* ViewController.m */,
 				C9E6BF4A1C72FFEB00E1BB7D /* ImageLoadingView.h */,
 				C9E6BF4B1C72FFEB00E1BB7D /* ImageLoadingView.m */,
-				C9E6BF4D1C73002700E1BB7D /* ImageLoadingView.xib */,
 				C9E6BF201C72FC7900E1BB7D /* Main.storyboard */,
 				C9E6BF231C72FC7900E1BB7D /* Assets.xcassets */,
 				C9E6BF251C72FC7900E1BB7D /* LaunchScreen.storyboard */,
@@ -252,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E6BF271C72FC7900E1BB7D /* LaunchScreen.storyboard in Resources */,
-				C9E6BF4E1C73002700E1BB7D /* ImageLoadingView.xib in Resources */,
 				C9E6BF241C72FC7900E1BB7D /* Assets.xcassets in Resources */,
 				C9E6BF221C72FC7900E1BB7D /* Main.storyboard in Resources */,
 			);
