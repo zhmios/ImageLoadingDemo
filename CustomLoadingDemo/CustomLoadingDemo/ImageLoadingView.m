@@ -11,6 +11,7 @@
 
 @property (nonatomic, strong) UIView *superView;
 @property (nonatomic, strong) NSArray *imageArray;
+
 @end
 
 @implementation ImageLoadingView
@@ -51,6 +52,7 @@
     imageView.animationDuration = 0.5;
     imageView.animationImages = images;
     [imageView startAnimating];
+    imageView.tag = 1;
     [self addSubview:imageView];
 
 
@@ -67,8 +69,13 @@
 
 - (void)dismiss{
 
+    UIImageView *imageView = [self viewWithTag:1];
 
-
+    [imageView stopAnimating];
+    
+    [self removeFromSuperview];
+    
+    
 }
 
 @end

@@ -25,7 +25,7 @@
 }
 - (IBAction)navigationBtnPress:(id)sender {
 
-    [self.loadingView show];
+    [self.loadingView dismiss];
     
 }
 

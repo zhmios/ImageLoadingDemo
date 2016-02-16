@@ -12,5 +12,5 @@
 
 - (id) initImageLoadingViewWithImages:(NSArray *)imageArray withSuperView:(UIView *)superView;
 - (void)show;
-
+- (void)dismiss;
 @end
