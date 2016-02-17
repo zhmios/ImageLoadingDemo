@@ -35,7 +35,7 @@
         CGFloat centerX = (CGRectGetWidth(superView.frame) - width) / 2;
         CGFloat centerY = (CGRectGetHeight(superView.frame) - height) / 2;
         self.frame = CGRectMake(centerX, centerY, width, height);
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+        self.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
         self.imageArray = imageArray;
         self.type = type;
         self.superView = superView;
